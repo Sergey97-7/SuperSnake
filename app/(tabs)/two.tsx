@@ -1,15 +1,17 @@
-import { StyleSheet } from 'react-native';
-
-import EditScreenInfo from '../../components/EditScreenInfo';
-import { Text, View } from '../../components/Themed';
+import {StyleSheet} from 'react-native';
+import 'react-native-gesture-handler'
+import Game from "../../components/Game/Game";
+import {GestureHandlerRootView} from "react-native-gesture-handler";
 
 export default function TabTwoScreen() {
+  // return <Game/>
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Tab Two</Text>
-      <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-      <EditScreenInfo path="app/(tabs)/two.tsx" />
-    </View>
+    <GestureHandlerRootView style={{flex: 1}}>
+      <Game/>
+    </GestureHandlerRootView>
+    // {/*<Text style={styles.title}>Tab Two</Text>*/}
+    // {/*<View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />*/}
+    // {/*<Board path="app/(tabs)/two.tsx" />*/}
   );
 }
 
